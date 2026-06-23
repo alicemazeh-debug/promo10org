@@ -1,53 +1,73 @@
-.all {
+* {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
-    padding: 20px;
-    margin: 20px;
+    padding: 5px;
+    margin: 10px;
     border-radius: 5px;
-
 }
-
-
-.contact-info {
+.slds-box.slds-theme_default {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+.slds-box.slds-theme_default .title:hover {
+    color: #333;
+    background-color: #e6e6e6;
+}
+.name {
     font-size: 20px;
     color: black;
-
-    contact-info:hover {
-        color: red;
-    }
-    
-    
 }
+.phone {
+    font-size: 20px;
+    color: gray;
+}
+.email {
+    font-size: 20px;
+    color: gray;
+}
+
+
+ 
+
+.title:hover {
+    font-size: 20px;
+    color: rgb(35, 216, 126);
+}
+
+
 
 .summary {
     font-size: 20px;
-    color: blue;
+    color: gray;
+    
 }
 .skill {
     font-size: 20px;
-    color: red;
+    color: gray;
 }
 .experience {
     font-size: 20px;
-    color: green;
+    color: gray;
 }
 .education {
 
     font-size: 20px;
-    color: orange;
+   color: gray;
 }
 .certifications {
     font-size: 20px;
-    color: purple;
+    color: gray;
 }
 .languages {
     font-size: 20px;
-    color: brown;
+    color: gray;
 }
 .certifications
     {
         font-size: 20px;
-        color: pink;
+        color: gray;
     }
     .languages
     {
