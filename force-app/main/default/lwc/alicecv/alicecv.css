@@ -1,0 +1,56 @@
+.all {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+
+}
+
+
+.contact-info {
+    font-size: 20px;
+    color: black;
+
+    contact-info:hover {
+        color: red;
+    }
+    
+    
+}
+
+.summary {
+    font-size: 20px;
+    color: blue;
+}
+.skill {
+    font-size: 20px;
+    color: red;
+}
+.experience {
+    font-size: 20px;
+    color: green;
+}
+.education {
+
+    font-size: 20px;
+    color: orange;
+}
+.certifications {
+    font-size: 20px;
+    color: purple;
+}
+.languages {
+    font-size: 20px;
+    color: brown;
+}
+.certifications
+    {
+        font-size: 20px;
+        color: pink;
+    }
+    .languages
+    {
+        font-size: 20px;
+        color: gray;
+    }
