@@ -1,54 +1,210 @@
 <template>
-    <div class="contact-info">
-        <h1>{name}</h1>
-        <p>Phone: {number}</p>
-        <p>Email: {email}</p>
-    </div>
+    <div class="slds-box slds-theme_default">
+        <div class="slds-m-bottom_medium"> 
+            <h1 class="title">Contact Information</h1> 
+        </div> 
 
-    <div class="SUMMARY">
-        <h2>Professional Summary</h2>
-        <p>I am a passionate software developer with experience in building scalable web applications using modern technologies.</p>  
-    </div>
-    <div class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SQL</li>
-            <li>Python</li>
-            <Li>OOP</Li>
-            <li>Data Structures</li>
-            <li>Algorithms</li>
-            <Li>Salesforce</Li>
-            <li>Team Work</li>
-            <li> Strong Communication </li>
-
-        </ul>   
         
+        <lightning-accordion active-section-name="A" class="info"> 
+            <lightning-accordion-section name="A" label="Contact Details"> 
+                
+                <!-- Action menu in the header slot -->
+                <lightning-button-menu slot="actions" alternative-text="Show menu" icon-size="x-small" menu-alignment="auto" onselect={handleMenuSelect}> 
+                    <lightning-menu-item value="new" label="New Contact"></lightning-menu-item> 
+                    <lightning-menu-item value="edit" label="Edit Contact"></lightning-menu-item> 
+                </lightning-button-menu> 
+
+                
+                <div class="slds-p-around_small">
+                    <h2 class="name">{name}</h2>
+                    <p class="phone"><strong>Phone:</strong> {number}</p> 
+                    <p class="email"><strong>Email:</strong> {email}</p>
+                </div>
+
+            </lightning-accordion-section> 
+        </lightning-accordion>
     </div>
 
-    <div class="experience">
-        <h2>Experience</h2>
-        <p>Data Science and data decision support , Intern at UN ESCWA, 2025</p>
-        <p>Worked on gathering and analyzing data to support decision-making processes.</p>
+    <div class="slds-box slds-theme_default">
+        <div class="slds-m-bottom_medium"> 
+            <h1 class="title">Professional Summary</h1> 
+        </div> 
+
+        
+        <lightning-accordion active-section-name="A" class="info"> 
+            <lightning-accordion-section name="A" label="Details"> 
+                
+                <!-- Action menu in the header slot -->
+                <lightning-button-menu slot="actions" alternative-text="Show menu" icon-size="x-small" menu-alignment="auto" onselect={handleMenuSelect}> 
+                    <lightning-menu-item value="new" label="New Contact"></lightning-menu-item> 
+                    <lightning-menu-item value="edit" label="Edit Contact"></lightning-menu-item> 
+                </lightning-button-menu> 
+
+                
+                <div class="summary">
+                    
+                    
+                    <p >Results-oriented Computer Science graduate with a bachelor’s degree and currently pursuing a master’s degree in computer
+                       science. Strong academic background with a focus on networking, cloud computing, and computer systems. Experienced in
+                        rogramming, data structures, and software development, with hands-on exposure to networking concepts through Cisco
+                        certification programs. Demonstrates strong analytical and problem-solving skills, with a practical interest in designing and
+                         managing scalable and efficient systems.</p> 
+                </div>
+
+            </lightning-accordion-section> 
+        </lightning-accordion>
     </div>
 
-    <div class="education">
-        <h2>Education</h2>
-        <p>Bachelor of Science in Computer Science, at Lebanese International University, 2025</p>
-        <p>Master of science in computer science , at Lebanese University ,2026</p>
+    <div class="slds-box slds-theme_default">
+        <div class="slds-m-bottom_medium"> 
+            <h1 class="title">Skills</h1> 
+        </div> 
+
+        
+        <lightning-accordion active-section-name="A" class="info"> 
+            <lightning-accordion-section name="A" label="Skills"> 
+                
+                <!-- Action menu in the header slot -->
+                <lightning-button-menu slot="actions" alternative-text="Show menu" icon-size="x-small" menu-alignment="auto" onselect={handleMenuSelect}> 
+                    <lightning-menu-item value="new" label="New Contact"></lightning-menu-item> 
+                    <lightning-menu-item value="edit" label="Edit Contact"></lightning-menu-item> 
+                </lightning-button-menu> 
+
+                
+                <div class="skills">
+                    
+                    
+                    <p >Technical Skills
+                        • Programming Languages: Python, Java, C, C++, Assembly, PHP, JavaScript, Dart (Flutter), HTML, CSS
+                        • Networking  Cloud: TCP/IP, OSI Model, subnetting, routing  switching, basic firewall concepts, secure networkdesign, cloud computing fundamentals, virtualization, distributed systems
+                        • Web  Mobile Development: Full-stack web development using PHP, HTML/CSS, JavaScript; cross-platform mobile
+                         application development with Flutter (Dart)
+                        • Machine Learning  AI: Experience with machine learning models (price prediction, recommendation systems);
+                         understanding of core ML concepts and implementation in Python
+                        • Databases: SQL, relational database design, querying, and database management
+                        • Software Engineering: Object-Oriented Programming (OOP), data structures  algorithms, scalable system design
+                        • Cybersecurity  Cryptography: Basic cryptography principles, secure data handling, and encryption techniques
+                        • Tools  Platforms: Visual Studio, VS Code, Jupyter Notebook, Google Colab, Cisco Packet Tracer
+                        • Additional Skills: Project planning, teamwork collaboration, analytical thinking, problem-solving, academic presentation.</p> 
+                </div>
+
+            </lightning-accordion-section> 
+        </lightning-accordion>
     </div>
 
-    <div class="certifications">
-        <h2>Certifications</h2>
-        <p> Certified  Data Scientist, 2025 </p>
-        <p>Distinction in academic performance, 2025 </p>
-        <p>Cisco Certified Computer Networking , 2024 </p>
+    <div class="slds-box slds-theme_default">
+        <div class="slds-m-bottom_medium"> 
+            <h1 class="title">Experience</h1> 
+        </div> 
+
+        
+        <lightning-accordion active-section-name="A" class="info"> 
+            <lightning-accordion-section name="A" label="Experience"> 
+                
+                <!-- Action menu in the header slot -->
+                <lightning-button-menu slot="actions" alternative-text="Show menu" icon-size="x-small" menu-alignment="auto" onselect={handleMenuSelect}> 
+                    <lightning-menu-item value="new" label="New Experience"></lightning-menu-item> 
+                    <lightning-menu-item value="edit" label="Edit Experience"></lightning-menu-item> 
+                </lightning-button-menu> 
+
+                
+                <div class="experience">
+                    
+                    
+                 <p>• Obstacle-Avoiding Robot – Embedded system using sensors for obstacle detection and avoidance
+                    • Restaurant Mobile Application – Flutter app for menu browsing, ordering, and user management
+                    • Spam Email Detection – NLP and machine learning model using Python and Scikit-learn
+                    • Home Price Prediction – Regression model for predicting housing prices
+                    • Website Development Projects – Responsive websites using HTML, CSS, JavaScript, and PHP
+                     Gym Management System – System for member registration, payments, attendance, and admin control
+                    • RAG System (UN ESCWA) – Document retrieval and question answering using embeddings and LLMs
+                    • Sentiment Analysis (UN ESCWA) – Text classification into positive, negative, and neutral
+                    • Word CloudText Analytics (UN ESCWA) – NLP-based keyword extraction and visualization
+                    • Network Topology Configuration – Cisco Packet Tracer simulations (routing, switching, subnetting).</p> 
+                </div>
+
+            </lightning-accordion-section> 
+        </lightning-accordion>
     </div>
-    <div class="languages">
-        <h2>Languages</h2>
-        <p>English: Fluent</p>
-        <p>Arabic: Native</p>
+
+    <div class="slds-box slds-theme_default">
+        <div class="slds-m-bottom_medium"> 
+            <h1 class="title">Education</h1> 
+        </div> 
+
+        
+        <lightning-accordion active-section-name="A" class="info"> 
+            <lightning-accordion-section name="A" label="Education"> 
+                
+                <!-- Action menu in the header slot -->
+                <lightning-button-menu slot="actions" alternative-text="Show menu" icon-size="x-small" menu-alignment="auto" onselect={handleMenuSelect}> 
+                    <lightning-menu-item value="new" label="New Education"></lightning-menu-item> 
+                    <lightning-menu-item value="edit" label="Edit Education"></lightning-menu-item> 
+                </lightning-button-menu> 
+                <div class="education">
+                  
+                    <p>Bachelor of Science in Computer Science, at Lebanese International University, 2025</p>
+                    <p>Master of science in computer science , at Lebanese University ,2026</p>
+                       </div>
+
+            </lightning-accordion-section> 
+        </lightning-accordion>
     </div>
+
+    <div class="slds-box slds-theme_default">
+        <div class="slds-m-bottom_medium"> 
+            <h1 class="title">Certifications</h1> 
+        </div> 
+
+        
+        <lightning-accordion active-section-name="A" class="info"> 
+            <lightning-accordion-section name="A" label="Certifications"> 
+                
+                <!-- Action menu in the header slot -->
+                <lightning-button-menu slot="actions" alternative-text="Show menu" icon-size="x-small" menu-alignment="auto" onselect={handleMenuSelect}> 
+                    <lightning-menu-item value="new" label="New Certification"></lightning-menu-item> 
+                    <lightning-menu-item value="edit" label="Edit Certification"></lightning-menu-item> 
+                </lightning-button-menu> 
+                <div class="certifications">
+                   
+                   <p> Certified  Data Scientist, 2025 </p>
+                   <p>Distinction in academic performance, 2025 </p>
+                     <p>Cisco Certified Computer Networking , 2024 </p>
+                        </div>
+
+            </lightning-accordion-section> 
+        </lightning-accordion>
+    </div>
+
+    
+<div class="slds-box slds-theme_default">
+        <div class="slds-m-bottom_medium"> 
+            <h1 class="title">Languages</h1> 
+        </div> 
+
+        
+        <lightning-accordion active-section-name="A" class="info"> 
+            <lightning-accordion-section name="A" label="Languages"> 
+                
+                <!-- Action menu in the header slot -->
+                <lightning-button-menu slot="actions" alternative-text="Show menu" icon-size="x-small" menu-alignment="auto" onselect={handleMenuSelect}> 
+                    <lightning-menu-item value="new" label="New Language"></lightning-menu-item> 
+                    <lightning-menu-item value="edit" label="Edit Language"></lightning-menu-item> 
+                </lightning-button-menu> 
+                <div class="languages">
+                   
+                   <p> English: Fluent</p>
+                   <p>Arabic: Native</p>
+                        </div>
+
+            </lightning-accordion-section> 
+        </lightning-accordion>
+    </div>
+
+
+    
+
+    
+    
+    
 </template>
