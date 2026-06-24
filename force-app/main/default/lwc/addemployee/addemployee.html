@@ -1,0 +1,93 @@
+<template>
+    <div class="slds-box slds-theme_default">
+        <h2 class="slds-text-heading_medium">Employee Information</h2>
+
+        <lightning-input-name
+            label="Employee Name"
+            first-name={firstName}
+            last-name={lastName}
+            name="employeeName"
+            onchange={handleNameChange}
+        ></lightning-input-name>
+
+        <lightning-input
+            type="email"
+            label="Email"
+            name="email"
+            value={email}
+            onchange={handleEmailChange}
+            placeholder="Enter email address"
+        ></lightning-input>
+
+        <lightning-input
+            type="number"
+            label="Age"
+            name="age"
+            value={age}
+            onchange={handleAgeChange}
+            placeholder="Enter age"
+        ></lightning-input>
+
+        <div class="slds-m-top_medium">
+            <lightning-button
+                variant="brand"
+                label="Add Employee"
+                onclick={handleSubmit}
+            ></lightning-button>
+        </div>
+    </div>
+
+    <template if:true={employees.length}>
+        <div class="slds-m-top_medium slds-box slds-theme_shade">
+            <h3 class="slds-text-heading_small">Employee List</h3>
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_fixed-layout">
+                <thead>
+                    <tr class="slds-line-height_reset">
+                        <th scope="col">
+                            <div class="slds-truncate" title="Name">Name</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Email">Email</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Age">Age</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Actions">Actions</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={employees} for:item="employee">
+                        <tr key={employee.id}>
+                            <th scope="row">
+                                <div class="slds-truncate" title={employee.fullName}>
+                                    {employee.firstName} {employee.lastName}
+                                </div>
+                            </th>
+                            <td>
+                                <div class="slds-truncate" title={employee.email}>
+                                    {employee.email}
+                                </div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate" title={employee.age}>
+                                    {employee.age}
+                                </div>
+                            </td>
+                            <td>
+                                <lightning-button
+                                    variant="destructive"
+                                    label="Delete"
+                                    data-id={employee.id}
+                                    onclick={handleRemoveEmployee}
+                                ></lightning-button>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </template>
+</template>
+

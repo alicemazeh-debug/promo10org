@@ -1,0 +1,19 @@
+<template>
+    <p>Lifecycle Demo</p>
+    <p>Counter: {counter}</p>
+    <p>{message}</p>
+    <div class="slds-m-top_medium">
+        <lightning-button
+            variant="brand"
+            label="Increment Counter"
+            onclick={handleIncrement}
+        ></lightning-button>
+    </div>
+    <div class="slds-m-top_medium">
+        <lightning-button
+            variant="brand"
+            label="Show/Hide Message"
+            onclick={handleShowHideMessage}
+        ></lightning-button>
+    </div>
+</template>
