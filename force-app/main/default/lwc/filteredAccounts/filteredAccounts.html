@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Accounts Filtered by Rating" icon-name="standard:account">
+        <div class="slds-p-around_medium">
+            <lightning-combobox
+                name="ratingFilter"
+                label="Select Rating"
+                value={selectedRating}
+                placeholder="Choose Rating..."
+                options={filterOptions}
+                onchange={handleSelection}>
+            </lightning-combobox>
+
+            <!-- Accounts Datatable -->
+            <div class="slds-m-top_medium">
+                <template if:true={showAccounts}>
+                    <lightning-datatable
+                        key-field="Id"
+                        data={accountsToDisplay}
+                        columns={columns}
+                        hide-checkbox-column>
+                    </lightning-datatable>
+                </template>
+            </div>
+
+            
+        </div>
+    </lightning-card>
+</template>

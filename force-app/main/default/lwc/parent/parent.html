@@ -1,0 +1,18 @@
+<template>
+    <div class="Parent">
+        <h2>Parent Component</h2>
+        <p>Child One : {childOne}</p>
+        <p>Child Two : {childTwo}</p>
+
+    </div>
+    <div class="container">
+        <c-child-one is-selected={childOneSelected} ontoggleone={handleChildOneToggle}></c-child-one>
+        <c-child-two is-selected={childTwoSelected} ontoggletwo={handleChildTwoToggle}></c-child-two>
+
+            <c-select-item item-name="Component 1" onselectionchange={handleSelectionChange}></c-select-item>
+            <c-select-item item-name="Component 2" onselectionchange={handleSelectionChange}></c-select-item>
+        
+        
+        
+    </div>
+</template>

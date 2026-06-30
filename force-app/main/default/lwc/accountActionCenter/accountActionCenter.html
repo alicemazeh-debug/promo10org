@@ -1,0 +1,119 @@
+<!-- <template>
+    <lightning-card title="Account Action Center" icon-name="custom:custom63">
+        <div class="slds-p-around_medium">
+            <lightning-button label="Recent Accounts" onclick={handleLoad} variant="brand"></lightning-button>
+            <lightning-button label="Hot Accounts" onclick={handleHotAccounts} variant="neutral" class="slds-m-left_x-small"></lightning-button>
+            <lightning-button label="Accounts Without Phone" onclick={handleAccountsWithoutPhone} variant="neutral" class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </lightning-card>
+
+    <template if:true={loading}>
+        <div class="slds-p-around_medium">
+            <lightning-spinner alternative-text="Loading accounts" size="small"></lightning-spinner>
+        </div>
+    </template>
+
+    <template if:true={errorMessage}>
+        <div class="slds-text-color_error slds-p-around_medium">{errorMessage}</div>
+    </template>
+
+    <template if:true={hasAccounts}>
+    <lightning-layout multiple-rows class="slds-p-around_medium">
+        <template for:each={accounts} for:item="account">
+            <lightning-layout-item key={account.Id} padding="around-small" size="4">
+                <article class="slds-box slds-box_xx-small slds-theme_shade" data-id={account.Id} onclick={handleAccountSelect}>
+                    <p class="slds-text-heading_small">{account.Name}</p>
+                    <p><strong>Industry:</strong> {account.Industry}</p>
+                    <p><strong>Phone:</strong> {account.Phone}</p>
+                    <p><strong>Rating:</strong> {account.Rating}</p>
+                    <p><strong>Description:</strong> {account. Description}</p>
+
+                </article>
+            </lightning-layout-item>
+        </template>
+    </lightning-layout>
+</template>
+
+    <template if:true={selectedAccount}>
+        <lightning-card title="Selected Account Details" icon-name="standard:account" class="slds-m-around_medium">
+            <div class="slds-p-around_medium">
+                <p><strong>Name:</strong> {selectedAccount.Name}</p>
+                <p><strong>Industry:</strong> {selectedAccount.Industry}</p>
+                <p><strong>Phone:</strong> {selectedAccount.Phone}</p>
+                <p><strong>Rating:</strong> {selectedAccount.Rating}</p>
+                <p><strong>Description:</strong> {selectedAccount.Description}</p>
+                 
+                <lightning-textarea label="Description" value={description} onchange={handleDescriptionChange}></lightning-textarea>
+                <lightning-button label="Update Description" onclick={handleUpdateDescription} variant="brand" class="slds-m-top_small"></lightning-button>
+            </div>
+        </lightning-card>
+    </template>
+    <template if:true={selectedAccount}>
+        <lightning-button 
+            label="Go to Account Page" 
+            onclick={navPageRef}>
+        </lightning-button>
+    </template>
+    
+
+</template> -->
+<template>
+    <lightning-card title="Account Action Center" icon-name="custom:custom63">
+        <div class="slds-p-around_medium">
+            <lightning-button label="Recent Accounts" onclick={handleLoad} variant="brand"></lightning-button>
+            <lightning-button label="Hot Accounts" onclick={handleHotAccounts} variant="neutral" class="slds-m-left_x-small"></lightning-button>
+            <lightning-button label="Accounts Without Phone" onclick={handleAccountsWithoutPhone} variant="neutral" class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </lightning-card>
+
+    <!-- The spinner is now driven accurately by the isolated JS handler flags -->
+    <template if:true={loading}>
+        <div class="slds-p-around_medium slds-is-relative" style="height: 100px;">
+            <lightning-spinner alternative-text="Loading accounts" size="small"></lightning-spinner>
+        </div>
+    </template>
+
+    <template if:false={loading}>
+        <template if:true={errorMessage}>
+            <div class="slds-text-color_error slds-p-around_medium">{errorMessage}</div>
+        </template>
+
+        <template if:true={hasAccounts}>
+            <lightning-layout multiple-rows class="slds-p-around_medium">
+                <template for:each={accounts} for:item="account">
+                    <lightning-layout-item key={account.Id} padding="around-small" size="4">
+                        <article class="slds-box slds-box_xx-small slds-theme_shade" data-id={account.Id} onclick={handleAccountSelect}>
+                            <p class="slds-text-heading_small">{account.Name}</p>
+                            <p><strong>Industry:</strong> {account.Industry}</p>
+                            <p><strong>Phone:</strong> {account.Phone}</p>
+                            <p><strong>Rating:</strong> {account.Rating}</p>
+                            <p><strong>Description:</strong> {account.Description}</p>
+                        </article>
+                    </lightning-layout-item>
+                </template>
+            </lightning-layout>
+        </template>
+
+        <template if:true={selectedAccount}>
+            <lightning-card title="Selected Account Details" icon-name="standard:account" class="slds-m-around_medium">
+                <div class="slds-p-around_medium">
+                    <p><strong>Name:</strong> {selectedAccount.Name}</p>
+                    <p><strong>Industry:</strong> {selectedAccount.Industry}</p>
+                    <p><strong>Phone:</strong> {selectedAccount.Phone}</p>
+                    <p><strong>Rating:</strong> {selectedAccount.Rating}</p>
+                    <p><strong>Description:</strong> {selectedAccount.Description}</p>
+                     
+                    <lightning-textarea label="Description" value={description} onchange={handleDescriptionChange}></lightning-textarea>
+                    <lightning-button label="Update Description" onclick={handleUpdateDescription} variant="brand" class="slds-m-top_small"></lightning-button>
+                </div>
+            </lightning-card>
+        </template>
+
+        <template if:true={selectedAccount}>
+            <lightning-button 
+                label="Go to Account Page" 
+                onclick={navPageRef}>
+            </lightning-button>
+        </template>
+    </template>
+</template>

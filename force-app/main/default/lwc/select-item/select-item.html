@@ -1,0 +1,17 @@
+<template>
+    <lightning-card class="slds-m-bottom_medium">
+        <div class="slds-box slds-var-p-around_medium">
+            <div class="slds-m-bottom_medium">
+                <strong>Item: {itemName}</strong>
+            </div>
+            <div class="slds-m-bottom_medium">
+                <p>Status: <span class={statusClass}>{status}</span></p>
+            </div>
+            <lightning-button
+                variant="brand"
+                label={buttonLabel}
+                onclick={handleToggleSelection}
+            ></lightning-button>
+        </div>
+    </lightning-card>
+</template>

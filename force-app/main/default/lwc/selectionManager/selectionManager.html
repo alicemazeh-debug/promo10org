@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Component 4 - Grand Parent Component" class="slds-m-bottom_large">
+        <div class="slds-var-p-around_large">
+            <div class="slds-box slds-var-p-around_medium slds-m-bottom_large slds-theme_shade">
+                <div class="slds-grid slds-align_space-between">
+                    <div>
+                        <h2 class="slds-text-heading_large">Total Selections: <span class="slds-text-color_success">{totalCount}</span></h2>
+                    </div>
+                    <div>
+                        <lightning-button
+                            variant="destructive"
+                            label="Reset All"
+                            onclick={handleResetAll}
+                        ></lightning-button>
+                    </div>
+                </div>
+            </div>
+
+            <c-item-list oncountchange={handleCountChange}></c-item-list>
+        </div>
+    </lightning-card>
+</template>

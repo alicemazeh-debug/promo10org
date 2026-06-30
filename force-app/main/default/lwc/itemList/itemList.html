@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Component 3 - Parent Component" class="slds-m-bottom_large">
+        <div class="slds-var-p-around_large">
+            <h3 class="slds-text-heading_small slds-m-bottom_medium">Selected Items Status:</h3>
+            <div class="slds-box slds-var-p-around_medium slds-m-bottom_large">
+                <p><strong>Component 1 Status:</strong> <span class={item1StatusClass}>{item1Status}</span></p>
+                <p><strong>Component 2 Status:</strong> <span class={item2StatusClass}>{item2Status}</span></p>
+            </div>
+
+            <div class="slds-grid slds-wrap slds-gap_medium">
+                <div class="slds-col slds-size_1-of-2">
+                    <c-select-item
+                        item-name="Component 1"
+                        onselectionchange={handleSelectionChange}
+                    ></c-select-item>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <c-select-item
+                        item-name="Component 2"
+                        onselectionchange={handleSelectionChange}
+                    ></c-select-item>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,39 @@
+<template>
+    <lightning-card title="Account Rating Filter" icon-name="standard:account">
+        
+       
+        <div class="slds-p-around_medium">
+            <lightning-combobox
+                name="ratingFilter"
+                label="Select Rating"
+                value={selectedRating}
+                placeholder="Select Rating"
+                options={dynamicOptions}
+                onchange={handleRatingChange}>
+            </lightning-combobox>
+        </div>
+
+     
+        <div class="slds-p-around_medium slds-grid slds-wrap slds-gutters">
+            <template if:true={accounts}>
+                <template for:each={accounts} for:item="acc">
+                    <div key={acc.Id} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3 slds-p-bottom_medium">
+                        <lightning-card title={acc.Name} icon-name="standard:client">
+                            <div class="slds-p-horizontal_small">
+                                <p><strong>Industry:</strong> {acc.Industry}</p>
+                                <p><strong>Phone:</strong> {acc.Phone}</p>
+                                <p><strong>Rating:</strong> {acc.Rating}</p>
+                            </div>
+                        </lightning-card>
+                    </div>
+                </template>
+            </template>
+
+            <template if:false={accounts}>
+                <div class="slds-align_absolute-center slds-p-around_large">
+                    <p>No accounts found matching this criteria.</p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
